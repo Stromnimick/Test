@@ -3,24 +3,24 @@ import java.util.Random;
 
 public class Units {
 
-	String name; // Name der Einheit
-	String race; // Rasse der Einheit
-	int number;	// Anzahl der Modelle in einer Einheit
-	int unit; // Einheitenstärke pro Modell
-	static int width; // Breite der Einheit
-	int ranks; // Glieder des Regiments
-	int movement; // Bewegungsreichweite der Einheit
+	String name; 		// Name der Einheit
+	String race; 		// Rasse der Einheit
+	int number;		// Anzahl der Modelle in einer Einheit
+	int unit; 		// Einheitenstärke pro Modell
+	static int width; 	// Breite der Einheit
+	int ranks; 		// Glieder des Regiments
+	int movement; 		// Bewegungsreichweite der Einheit
 	static int weaponskill; // Kampffähigkeiten im Nahkampf
-	int ballisticskill; // Kampffähigkeiten im Fernkampf
-	int strength; // Stärke der Angriffe
-	int toughness; // Widerstand gegen Verwundungen
-	int will; // Lebenspunkte bis ein Modell entfernt wird
-	int initiative; // Bestimmt die Reihenfolge der Attacken
-	int attacks; // Anzahl der Attacken
-	int leadership; // Moralwert für Psychologietests
-	int amoursave; // Rüstungswurf gegen erfolgreiche Verwundungen
-	int wardsave; // Rettungswurf nach erfolglosem Rüstungswurf 
-	int magicability; // Magiestufe zum Zaubern
+	int ballisticskill; 	// Kampffähigkeiten im Fernkampf
+	int strength; 		// Stärke der Angriffe
+	int toughness; 		// Widerstand gegen Verwundungen
+	int will; 		// Lebenspunkte bis ein Modell entfernt wird
+	int initiative		// Bestimmt die Reihenfolge der Attacken
+	int attacks; 		// Anzahl der Attacken
+	int leadership; 	// Moralwert für Psychologietests
+	int amoursave; 		// Rüstungswurf gegen erfolgreiche Verwundungen
+	int wardsave; 		// Rettungswurf nach erfolglosem Rüstungswurf 
+	int magicability; 	// Magiestufe zum Zaubern
 	
 	
 	public int hit(int ews) 		// ews = Kampfgeschick des Gegners
