@@ -25,14 +25,14 @@ public class Units {
 	
 	public int hit(int ews) 		// ews = Kampfgeschick des Gegners
 	{ 
-		int dicetohit; 				// was muss gewürfelt werden um einen Treffer zu erzielen?
-		int hits=0;				// Anzahl der zugefügten Verwundungen
+		int dicetohit; 			// was muss gewürfelt werden um einen Treffer zu erzielen?
+		int hits=0;			// Anzahl der zugefügten Verwundungen
 		
 		if(2*weaponskill<ews) 		// ist das Kampfgeschick des Gegners mehr als doppelt so hoch, dann auf 5
 			dicetohit = 5;
 		else if (weaponskill>ews)	// ist das Kampfgeschick des Gegners kleiner, dann auf 3
 			dicetohit = 3;
-		else						// sonst auf 4
+		else				// sonst auf 4
 			dicetohit = 4;
 		
 		System.out.println("Es werden " + width*2 + " Attacken ausgeführt."); // die erste und zweite Reihe können kämpfen
@@ -62,10 +62,10 @@ public class Units {
 			return 0;
 		else
 		{
-		int dicetowound;			// was muss gewürfelt werden um eine Verwundung zu erzielen?
+		int dicetowound;		// was muss gewürfelt werden um eine Verwundung zu erzielen?
 		int wounds = 0;			// Anzahl der Rüstungswürfe, die abgelegt werden müssen
 		
-		if(et>strength+1)			// ist der Widerstand um mindestens 2 größer als die Stärke, dann auf 6
+		if(et>strength+1)		// ist der Widerstand um mindestens 2 größer als die Stärke, dann auf 6
 			dicetowound = 6;
 		else if(et>strength)		// ist der Widerstand nicht mindestens um 2 größer, aber größer, dann auf 5
 			dicetowound = 5;
@@ -73,7 +73,7 @@ public class Units {
 			dicetowound = 4;
 		else if (strength==et+1)	// ist die Stärke genau um 1 größer als der Widerstand, dann auf 3
 			dicetowound = 3;
-		else						// sonst auf 2
+		else				// sonst auf 2
 			dicetowound = 2;
 		
 		System.out.println("Stärke " + strength + " gegen Widerstand " + et + " bedeutet, dass mindestens eine " + dicetowound + " zum Verwunden benötigt wird.");
