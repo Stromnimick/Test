@@ -7,10 +7,11 @@ public class Units {
 	String race; // Rasse der Einheit
 	int number;	// Anzahl der Modelle in einer Einheit
 	int unit; // Einheitenstärke pro Modell
-	static int width; // Breite der Einheit
+	int points;  
+	int width; // Breite der Einheit
 	int ranks; // Glieder des Regiments
 	int movement; // Bewegungsreichweite der Einheit
-	static int weaponskill; // Kampffähigkeiten im Nahkampf
+	int weaponskill; // Kampffähigkeiten im Nahkampf
 	int ballisticskill; // Kampffähigkeiten im Fernkampf
 	int strength; // Stärke der Angriffe
 	int toughness; // Widerstand gegen Verwundungen
@@ -18,9 +19,10 @@ public class Units {
 	int initiative; // Bestimmt die Reihenfolge der Attacken
 	int attacks; // Anzahl der Attacken
 	int leadership; // Moralwert für Psychologietests
-	int amoursave; // Rüstungswurf gegen erfolgreiche Verwundungen
+	int armoursave; // Rüstungswurf gegen erfolgreiche Verwundungen
 	int wardsave; // Rettungswurf nach erfolglosem Rüstungswurf 
 	int magicability; // Magiestufe zum Zaubern
+	int unitpoints = points*number;
 	
 	
 	public int hit(int ews) 		// ews = Kampfgeschick des Gegners
