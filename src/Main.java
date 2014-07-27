@@ -11,8 +11,13 @@ public class Main {
 
 		
 		Unit einheitA = new ZwergeKlankrieger(true,true,true,true,true);
-		einheitA.ward(einheitA.armour(einheitA.wound(einheitA.hit(4),3),6),6);		
-		System.out.println("Die Punktkosten für diese Einheit betragen: " + einheitA.unitpoints + " .");
+		Unit einheitB = new HochelfenSpeerträger(true,true,true);
+		CloseCombat nahkrampf = new CloseCombat();
+		
+		nahkrampf.closeCombat (einheitA, einheitB);
+		
+		//einheitA.ward(einheitA.armour(einheitA.wound(einheitA.hit(4),3),6),6);		
+		//System.out.println("Die Punktkosten für diese Einheit betragen: " + einheitA.unitAttacks + " .");
 
 		
 	}

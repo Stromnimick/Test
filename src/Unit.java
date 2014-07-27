@@ -1,6 +1,8 @@
 import java.util.Random;
 
 
+
+
 public class Unit {
 
 	String name; // Name der Einheit
@@ -22,21 +24,17 @@ public class Unit {
 	int armourSave; // Rüstungswurf gegen erfolgreiche Verwundungen
 	int wardSave; // Rettungswurf nach erfolglosem Rüstungswurf 
 	int magicAbility; // Magiestufe zum Zaubern
+	int unitAttacks;
 	int unitpoints = points*number;
 	boolean hasShield;
 	boolean has2HandWeapon;
-	boolean firstStrike;
+	protected boolean strikeFirst;
+	protected boolean strikeLast;
 	boolean champion;
 	boolean musican;
 	boolean banner;
 	
-	
-	public int closeCombat (){
-		
-		
-		return 0;
-	}
-	
+
 	
 	
 	public int hit(int ews){ 		// ews = Kampfgeschick des Gegners
@@ -217,6 +215,5 @@ public class Unit {
 			return willlost;
 		}
 	}
-	
 	
 }

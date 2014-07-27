@@ -1,7 +1,7 @@
 
 public class HochelfenSpeerträger extends Unit{
 	
-	public HochelfenSpeerträger(boolean champion, boolean musican, boolean banner){
+	public HochelfenSpeerträger(boolean champione, boolean musican, boolean banner){
 		name = "Speeträger"; 	// Name der Einheit
 		race = "Hochelfen"; 	// Rasse der Einheit
 		points = 9; 			// Punktkosten pro Modell
@@ -21,8 +21,18 @@ public class HochelfenSpeerträger extends Unit{
 		armourSave = 5; 		// Leichte Rüstung und Schild
 		wardSave = 7; 			// Rettungswurf nach erfolglosem Rüstungswurf 
 		magicAbility = 0; 		// Magiestufe zum Zaubern
+		unitAttacks = 0;
 		hasShield = true;
-		firstStrike = true;
+		strikeFirst = true;
+		this.champion = champione;
+		this.musican = musican;
+		this.banner = banner;	
+		
+		if (champion)
+			unitAttacks = width*2*attacks+1;
+		else
+			unitAttacks = width*2*attacks;
+		
 		
 		unitpoints = points*number;
 				

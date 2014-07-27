@@ -1,7 +1,7 @@
 
 public class ZwergeKlankrieger extends Unit{
 	
-	public ZwergeKlankrieger(boolean champion, boolean musican, boolean banner, boolean hasshield, boolean has2handweapon){
+	public ZwergeKlankrieger(boolean champione, boolean musican, boolean banner, boolean hasshield, boolean has2handweapon){
 		name = "Klankrieger"; 	// Name der Einheit
 		race = "Zwerge"; 		// Rasse der Einheit
 		points = 8; 			// Punktkosten pro Modell
@@ -21,11 +21,19 @@ public class ZwergeKlankrieger extends Unit{
 		armourSave = 5; 		// Schwere Rüstung
 		wardSave = 7; 			// Rettungswurf nach erfolglosem Rüstungswurf 
 		magicAbility = 0; 		// Magiestufe zum Zaubern
+		unitAttacks =0;
+		strikeFirst = false;
+		strikeLast = false;
 		this.hasShield = hasshield;
 		this.has2HandWeapon = has2handweapon;
-		this.champion = champion;
+		this.champion = champione;
 		this.musican = musican;
 		this.banner = banner;		
+		
+		if (champion)
+			unitAttacks = (width*2)*attacks+1;
+		else
+			unitAttacks = (width*2)*attacks;
 		
 		if(hasShield){
 			points = points+1;
@@ -36,10 +44,14 @@ public class ZwergeKlankrieger extends Unit{
 		if(has2HandWeapon){
 			points = points+2;
 			strength = strength+2;
+			strikeLast = true;
 		}
 		
 		unitpoints = points*number;
-				
+		
+		
+		
+		
 	}
 
 }
