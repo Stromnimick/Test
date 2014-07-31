@@ -1,13 +1,12 @@
+package units;
+
 
 public class HochelfenSpeerträger extends Unit{
 	
-	public HochelfenSpeerträger(boolean champione, boolean musican, boolean banner){
-		name = "Speeträger"; 	// Name der Einheit
-		race = "Hochelfen"; 	// Rasse der Einheit
+	public HochelfenSpeerträger(int number, int width, boolean champione, boolean musican, boolean banner){
+
 		points = 9; 			// Punktkosten pro Modell
-		number = 10;			// Anzahl der Modelle in einer Einheit
 		unit = 1; 				// Einheitenstärke pro Modell
-		width = 5; 				// Breite der Einheit
 		ranks = number/width; 	// Glieder des Regiments
 		movement = 5; 			// Bewegungsreichweite der Einheit
 		weaponSkill = 4; 		// Kampffähigkeiten im Nahkampf
@@ -21,9 +20,10 @@ public class HochelfenSpeerträger extends Unit{
 		armourSave = 5; 		// Leichte Rüstung und Schild
 		wardSave = 7; 			// Rettungswurf nach erfolglosem Rüstungswurf 
 		magicAbility = 0; 		// Magiestufe zum Zaubern
-		unitAttacks = 0;
 		hasShield = true;
 		strikeFirst = true;
+		this.number = number;
+		this.width = width;
 		this.champion = champione;
 		this.musican = musican;
 		this.banner = banner;	
@@ -37,4 +37,14 @@ public class HochelfenSpeerträger extends Unit{
 		unitpoints = points*number;
 				
 	}
+	
+	@Override
+	public String getName() {
+		return "Speerträger";
+	}
+	
+	@Override
+	public String getRace() {
+		return "Hochelfen";
+	}	
 }

@@ -1,14 +1,12 @@
+package units;
+
 
 public class ZwergeKlankrieger extends Unit{
 	
-	public ZwergeKlankrieger(boolean champione, boolean musican, boolean banner, boolean hasshield, boolean has2handweapon){
-		name = "Klankrieger"; 	// Name der Einheit
-		race = "Zwerge"; 		// Rasse der Einheit
+	public ZwergeKlankrieger(int number, int width, boolean champione, boolean musican, boolean banner, boolean hasshield, boolean has2handweapon){
+
 		points = 8; 			// Punktkosten pro Modell
-		number = 10;			// Anzahl der Modelle in einer Einheit
 		unit = 1; 				// Einheitenstärke pro Modell
-		width = 5; 				// Breite der Einheit
-		ranks = number/width; 	// Glieder des Regiments
 		movement = 3; 			// Bewegungsreichweite der Einheit
 		weaponSkill = 4; 		// Kampffähigkeiten im Nahkampf
 		ballisticSkill = 3; 	// Kampffähigkeiten im Fernkampf
@@ -21,19 +19,16 @@ public class ZwergeKlankrieger extends Unit{
 		armourSave = 5; 		// Schwere Rüstung
 		wardSave = 7; 			// Rettungswurf nach erfolglosem Rüstungswurf 
 		magicAbility = 0; 		// Magiestufe zum Zaubern
-		unitAttacks =0;
 		strikeFirst = false;
 		strikeLast = false;
+		this.number = number;
+		this.width = width;
 		this.hasShield = hasshield;
 		this.has2HandWeapon = has2handweapon;
 		this.champion = champione;
 		this.musican = musican;
 		this.banner = banner;		
 		
-		if (champion)
-			unitAttacks = (width*2)*attacks+1;
-		else
-			unitAttacks = (width*2)*attacks;
 		
 		if(hasShield){
 			points = points+1;
@@ -46,14 +41,19 @@ public class ZwergeKlankrieger extends Unit{
 			strength = strength+2;
 			strikeLast = true;
 		}
-		
-		unitpoints = points*number;
-		
-		
-		
-		
+
 	}
 
+	@Override
+	public String getName() {
+		return "Klankrieger";
+	}
+	
+	@Override
+	public String getRace() {
+		return "Zwerge";
+	}
+	
 }
 
 
